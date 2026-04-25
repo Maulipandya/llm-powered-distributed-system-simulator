@@ -46,6 +46,11 @@ The system includes:
 * `paper/` → report
 * `slides/` → presentation
 
+## Setup
+
+Install dependency:
+pip install matplotlib
+
 ## How to Run
 
 Run experiments:
@@ -57,4 +62,3 @@ python scripts/plot_results.py
 ## Team
 
 Team 14 – LLM Study
-
