@@ -1,32 +1,32 @@
 # Scripts
 
-This folder contains scripts used to run experiments and generate visualizations for the distributed system simulator.
+This folder contains the scripts used to run simulations and generate plots.
 
 ## Files
 
 ### run_experiments.py
 
-* Executes simulation experiments across different cluster sizes (16–128 nodes)
-* Runs both static and hybrid (LLM-assisted) modes
-* Aggregates results across multiple seeds
-* Outputs:
+* Runs the distributed system simulator across different cluster sizes
+* Executes both static and hybrid (LLM-assisted) modes
+* Collects results from multiple runs
+* Saves outputs to:
 
-  * CSV file (`results/benchmark_results.csv`)
-  * JSON logs (`results/*.json`)
+  * `results/benchmark_results.csv`
+  * `results/*.json`
 
 ---
 
 ### plot_results.py
 
-* Reads the aggregated CSV file
-* Generates performance plots for key metrics:
+* Reads the CSV results file
+* Generates plots for:
 
   * latency
   * throughput
   * utilization
   * recovery time
   * LLM overhead
-* Saves plots as `.png` files
+* Saves plots as `.png` images
 
 ---
 
@@ -40,10 +40,6 @@ python scripts/plot_results.py
 
 ---
 
-## Summary
-
-These scripts form the experimental pipeline:
+## Pipeline
 
 Simulation → JSON logs → CSV aggregation → Plots
-
-They ensure all results in the paper are reproducible.
