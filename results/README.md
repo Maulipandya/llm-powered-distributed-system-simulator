@@ -34,16 +34,15 @@ nodes_<N>_llm_<True/False>_seed_<S>.json
 
 ## Usage
 
-* CSV file is used for generating plots
-* JSON files provide detailed simulation logs and reproducibility
-
+- CSV file is used for generating plots  
+- JSON files provide detailed simulation logs and reproducibility  
 ---
 
 ## Summary
 
-This folder contains both:
+This folder contains:
 
-* aggregated performance metrics (CSV)
-* detailed run-level logs (JSON)
+- aggregated performance metrics (CSV)  
+- detailed run-level logs (JSON)  
 
 which support the results presented in the paper.
