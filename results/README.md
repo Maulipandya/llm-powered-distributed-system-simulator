@@ -28,7 +28,7 @@ This folder contains output data generated from simulation experiments.
   * multiple random seeds
 
 Each file follows this format:
-nodes_<N>*llm*<True/False>*seed*<S>.json
+nodes_<N>_llm_<True/False>_seed_<S>.json
 
 ---
 
