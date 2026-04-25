@@ -1,77 +1,92 @@
 # Analysis
 
-This folder summarizes the key insights derived from the simulation experiments presented in the paper.
+This folder summarizes the key findings derived from the simulation experiments and system design presented in the paper.
 
 ## Overview
 
-The experiments evaluate a hybrid distributed system simulator that combines deterministic execution with LLM-assisted reasoning. The goal is to analyze performance, scalability, and trade-offs between static and hybrid simulation modes.
+The analysis evaluates a hybrid distributed system simulator that integrates deterministic execution with LLM-assisted reasoning. The goal is to understand performance trade-offs, system behavior, and the role of LLMs in simulation environments.
 
 ---
 
-## Key Observations
+## Key Findings
 
-### 1. Throughput vs Latency Trade-off
+### 1. LLMs Augment Simulation Systems
 
-As shown in the results, system performance exhibits a clear trade-off:
+LLMs do not replace traditional simulation engines. Instead, they enhance them by providing higher-level reasoning capabilities.
 
-* Throughput increases with cluster size and approaches a capacity limit
-* Latency is affected by queueing and system load
-* In hybrid mode, latency is higher due to LLM reasoning overhead
-
-This aligns with the paper’s finding that increased adaptability introduces computational cost 
+* Deterministic simulation ensures reproducibility
+* LLM modules introduce flexibility and adaptability
+* Hybrid systems combine the strengths of both approaches
 
 ---
 
-### 2. Impact of LLM-Assisted Simulation
+### 2. Modular Architecture Improves Stability
 
-The hybrid (LLM-assisted) mode demonstrates:
+Decomposing the system into components (workload, failure, log analysis) improves:
 
-* Improved throughput compared to static mode
-* More adaptive workload behavior
-* Additional latency due to inference overhead
+* interpretability
+* control
+* system reliability
 
-This supports the paper’s conclusion that:
-
-> LLMs enhance flexibility but introduce measurable system overhead 
+This modular design aligns with multi-agent system principles and prevents instability from monolithic designs.
 
 ---
 
-### 3. Recovery Behavior
+### 3. Context-Aware Simulation Improves Realism
 
-* Recovery time improves as cluster size increases
-* Hybrid mode adapts better to failure scenarios
-* System resilience benefits from dynamic failure modeling
+LLM-assisted simulation enables more realistic system behavior:
 
-This reflects the structured failure injection framework described in the paper 
+* dynamic workload patterns
+* adaptive failure scenarios
+* semantic interpretation of logs
+
+This improves the ability to model real-world distributed systems compared to static approaches.
 
 ---
 
-### 4. Resource Utilization Trends
+### 4. Latency Overhead is an Unavoidable Trade-off
 
-* Utilization decreases with increasing cluster size
-* Indicates increased capacity and reduced contention
-* Hybrid mode maintains slightly better efficiency under load
+LLM integration introduces additional computational cost:
+
+* increased latency due to inference overhead
+* additional processing during workload and failure reasoning
+
+This confirms that:
+
+> improved adaptability comes at the cost of performance overhead 
+
+---
+
+### 5. LLMs are Best for High-Level Reasoning
+
+LLMs are most effective when used for:
+
+* decision support
+* scenario generation
+* log interpretation
+
+They are not suitable for low-level numerical computation, which is better handled by deterministic simulation logic.
 
 ---
 
 ## Interpretation
 
-The results demonstrate that hybrid simulation systems:
+The results demonstrate that hybrid simulation systems must balance:
 
-* Preserve deterministic reliability
-* Introduce semantic adaptability through LLM modules
-* Require careful balancing of performance and overhead
+* deterministic reliability
+* probabilistic reasoning
+* computational efficiency
 
-This matches the paper’s central insight that LLMs should act as **bounded reasoning modules**, not replacements for system logic 
+The most effective design uses LLMs as **bounded reasoning modules**, rather than giving them full control over system execution.
 
 ---
 
 ## Conclusion
 
-The experimental results validate the key claims of the paper:
+The analysis validates the main claims of the paper:
 
-* LLM-assisted simulation improves realism and adaptability
-* Performance gains come with additional latency overhead
-* Hybrid architectures offer a practical balance between control and flexibility
+* Hybrid LLM-assisted simulation improves flexibility and realism
+* Deterministic control ensures reproducibility
+* Performance trade-offs must be carefully managed
 
-Overall, the analysis confirms that LLM-powered simulation is most effective when integrated into structured, reproducible systems.
+Overall, the system demonstrates that LLM-powered simulation is a practical and scalable approach when integrated into structured workflows.
