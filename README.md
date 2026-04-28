@@ -1,28 +1,43 @@
 # LLM-Powered Distributed System Simulator
 
-## Overview
+## 📌 Overview
 
-This project implements a hybrid distributed system simulator that combines deterministic execution with LLM-assisted reasoning for workload generation, failure modeling, and semantic log analysis.
+This project presents a **hybrid distributed system simulator** that combines:
 
-## Key Features
+* **Deterministic execution** for reproducibility
+* **LLM-assisted reasoning** for adaptability
 
-* Static vs Hybrid (LLM-assisted) simulation modes
+The system models real-world behavior through:
+
 * Adaptive workload generation
-* Controlled failure injection (node, network, cascading)
+* Failure modeling (node, network, cascading)
 * Semantic log analysis
+
+---
+
+## 🚀 Key Features
+
+* Static vs **Hybrid (LLM-assisted)** simulation modes
+* Controlled failure injection
+* Realistic workload generation
+* LLM-based log analysis
 * Reproducible experiment pipeline
 
-## Architecture
+---
 
-The system includes:
+## 🏗️ Architecture
 
-* `DistributedSystemSimulator` (core engine)
-* `WorkloadAgent` (workload generation)
-* `FailureAgent` (failure modeling)
-* `SemanticLogAgent` (log analysis)
+Core components:
+
+* `DistributedSystemSimulator` (engine)
+* `WorkloadAgent`, `FailureAgent`, `SemanticLogAgent`
 * `LLMModule` (bounded reasoning layer)
 
-## Metrics
+👉 LLMs are used only for **high-level reasoning**, while execution remains deterministic.
+
+---
+
+## 📊 Metrics
 
 * Latency
 * Throughput
@@ -30,35 +45,64 @@ The system includes:
 * Recovery Time
 * LLM Overhead
 
-## Results Summary
+---
 
-* Hybrid mode improves throughput
-* LLM introduces additional latency overhead
-* Recovery improves with scale in hybrid mode
-* Demonstrates trade-off between adaptability and cost
+## 📈 Results (Summary)
 
-## Structure
+* Hybrid improves **throughput and utilization**
+* Improves **recovery under failures**
+* Trade-off: **increased latency due to LLM overhead**
 
-* `src/` → simulator
-* `scripts/` → experiments & plotting
-* `results/` → outputs (CSV, JSON)
-* `plots/` → graphs
-* `paper/` → report
-* `slides/` → presentation
+---
 
-## Setup
+## 📄 Paper
 
-Install dependency:
-pip install matplotlib
+`paper/Team_14_LLM_Study_paper.pdf`
+Detailed design, experiments, and evaluation.
 
-## How to Run
+---
 
-Run experiments:
+## 📊 Presentation
+
+`presentation/Team_14_LLM_Study_presentation.pptx`
+
+Provides a **visual overview** of:
+
+* Problem & motivation
+* System architecture & workflow
+* Experimental setup and results
+* Key insights and trade-offs
+
+---
+
+## 📁 Structure
+
+```id="3i0v5r"
+src/        # simulator
+scripts/    # experiments
+results/    # outputs
+plots/      # graphs
+paper/      # report
+presentation/ # slides
+```
+
+---
+
+## ▶️ Run
+
+```id="r6r03g"
 python scripts/run_experiments.py
-
-Generate plots:
 python scripts/plot_results.py
+```
 
-## Team
+---
 
-Team 14 – LLM Study
+## 🔁 Reproducibility
+
+Experiments can be reproduced using provided scripts. Results and plots are included.
+
+---
+
+## 👥 Team
+
+**Team 14 – LLM Study**
